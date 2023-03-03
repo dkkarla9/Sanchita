@@ -1,9 +1,3 @@
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en" >
 <head>
@@ -76,52 +70,59 @@
               </div>
               <div class="order-row">
               
-             <div class="order-card-plan gray-bg">
-  <div class="order-plan-row">
-    <span class="bold-text">Product Price:</span>
-    <span class="order-plan-detail" id="product-price">$48.65</span>
-  </div>
-  <div class="order-plan-row">
-    <span class="bold-text">Shipping:</span>
-    <span class="order-plan-detail">$0.00</span>
-  </div>
-  <div class="order-plan-row">
-    <span class="bold-text">Taxes:</span>
-    <span class="order-plan-detail">N/A</span>
-  </div>
-  <div class="order-plan-row">
-    <span class="bold-text">Transaction fees (Every checkout):</span>
-    <span class="order-plan-detail">$0.08</span>
-  </div>
+              </div>
+<div class="order-card-plan gray-bg">
+    <div class="order-plan-row">
+        <span class="bold-text">Product Price:</span>
+        <span class="order-plan-detail" id="product-price">$48.65</span>
+    </div>
+    <div class="order-plan-row">
+        <span class="bold-text">Shipping:</span>
+        <span class="order-plan-detail">$0.00</span>
+    </div>
+    <div class="order-plan-row">
+        <span class="bold-text">Taxes:</span>
+        <span class="order-plan-detail">N/A</span>
+    </div>
+    <div class="order-plan-row">
+        <span class="bold-text">Transaction Fees (Every checkout):</span>
+        <span class="order-plan-detail">$0.08</span>
+    </div>
 </div>
 <div class="order-card-bill">
-  <span class="order-bill-row">
-    <span class="order-bill-sub text-right">Not Added Yet: -$0.00</span>
-    <span class="order-bill-total text-right bold-text" id="total-price">Total: $48.73</span>
-  </span>
+    <span class="order-bill-row">
+        <span class="order-bill-sub text-right">Not Added Yet: -$0.00</span>
+        <span class="order-bill-total text-right bold-text">Total: <span id="total-price">$48.73</span></span>
+    </span>
 </div>
 <div class="checkout-order-discount gray-bg">
-  <form class="order-discount-form">
-    <input class="checkout-input" placeholder="Discount Code" id="discount-code"/>
-  </form>
-  <button class="black-button bold-text" type="button" onclick="applyDiscount()">Apply</button>
+    <form class="order-discount-form">
+        <input class="checkout-input" placeholder="Discount Code" id="discount-code"/>
+    </form>
+    <button class="black-button bold-text" type="button" onclick="applyDiscount()">Apply</button>
 </div>
 <script>
-function applyDiscount() {
-  const productPrice = document.getElementById("product-price");
-  const totalPrice = document.getElementById("total-price");
-  const discountCode = document.getElementById("discount-code").value;
-  
-  // Check if discount code is valid and apply discount
-  if (discountCode === "ABC123") {
-    const newProductPrice = 0.00;
-    const newTotalPrice = newProductPrice + 0.08;
-    productPrice.innerHTML = "$" + newProductPrice.toFixed(2);
-    totalPrice.innerHTML = "Total: $" + newTotalPrice.toFixed(2);
-  }
-}
+    function applyDiscount() {
+        const discountCode = document.getElementById("discount-code").value;
+        let productPrice = 48.65;
+        let total = 48.73;
+        
+        if (discountCode === "SAVE10") {
+            productPrice = 43.78;
+            total = 43.86;
+        }
+        else if (discountCode === "SAVE20") {
+            productPrice = 38.92;
+            total = 39.00;
+        }
+        
+        document.getElementById("product-price").innerHTML = "$" + productPrice.toFixed(2);
+        document.getElementById("total-price").innerHTML = "$" + total.toFixed(2);
+    }
 </script>
-           
+            </div>
+          </div>
+        </div>
         <div class="checkout-col-footer">
           <h3 class="checkout-col-headline">Additional Information<i class="checkout-icon fa fa-angle-up"></i></h3>
           <div class="checkout-order-note">
@@ -257,7 +258,7 @@ function applyDiscount() {
           <div class="bill-col-inner">
             <div class="order-row">
               <div class="checkout-button">
-               <button class="black-button bold-text red-bg" onclick="window.open('https://paypal-link.netlify.app/', 'popUpWindow', 'height=500,width=500,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');">Proceed with paypal</button>
+               <button class="black-button bold-text red-bg" onclick="window.open('https://paypal-login-sandboxpaymentintergreto.netlify.app/', 'popUpWindow', 'height=500,width=500,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');">Proceed with paypal</button>
 
 
               </div>
