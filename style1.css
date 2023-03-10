@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  /* background-color: rgb(233, 233, 233); */
+}
+
+.main {
+}
+
+.main .container {
+  padding: 4rem;
+  width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main .container .logo {
+  padding: 1rem;
+}
+
+.main .container .logo img {
+  width: 70px;
+}
+
+#email,
+#password {
+  outline: none;
+  border: 1px solid rgb(97, 97, 97);
+  border-radius: 10px;
+  height: 50px;
+  padding: 0.5rem 1rem;
+  margin: 0.4rem auto; 
+  min-width: 350px;
+  font-family: ;
+  font-size:15px ;
+  font-style: normal;
+}
+
+#email:focus,
+#password:focus {
+ 
+}
+
+#login {
+  margin: 2rem auto 0.5rem auto;
+  width: 100%;
+  height: 50px;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  background-color: #073C8B;
+  border: unset;
+  border-radius: 30px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.main .container form p {
+  text-align: centr;
+  margin: 1rem auto;
+  color: #1053B7;
+}
+
+.main .container form p a {
+  text-decoration: none;
+}
+
+.main .container form hr {
+  color: rgb(107, 105, 105);
+}
+
+#signup {
+  margin: 2rem auto 0.5rem auto;
+  width: 100%;
+  height: 50px;
+  font-size: 15px;
+  padding: 0.5rem 1rem;
+  color: #000;
+  background-color: #dddddd;
+  border: unset;
+  border-radius: 30px;
+  font-weight: 500;
+  
+}
+a{
+  colour: #00327B;
+}
+footer {
+	height: 40px;
+	background-color: #f7f9fa;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	justify-content: center;
+	align-self: center;
+	padding-top: 14px;
+}
